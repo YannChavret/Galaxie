@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparaison des données</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Redshift</th>
+                <th>Continuum Amplitude</th>
+                <th>Continuum Amplitude Uncertainty</th>
+                <!-- Ajoutez ici les autres en-têtes de colonnes que vous souhaitez afficher -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les données seront ajoutées ici dynamiquement en utilisant JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        // Récupérer les données depuis l'API (remplacez l'URL par celle de votre API)
+        fetch('http://localhost:3000/api/data')
+            .then(response => response.json())
+            .then(data => {
+                const dataTable = document.getElementById('data-table');
+                const tbody = dataTable.getElementsByTagName('tbody')[0];
+                console.log(data);
+                // Parcourir les données et créer les lignes du tableau
+                data.forEach(item => {
+                    const row = document.createElement('tr');
+
+                    // Ajouter les cellules avec les valeurs correspondantes
+                    const redshiftCell = document.createElement('td');
+                    redshiftCell.textContent = item.Redshift;
+                    row.appendChild(redshiftCell);
+
+                    const continuumAmplitudeCell = document.createElement('td');
+                    continuumAmplitudeCell.textContent = item.ContinuumAmplitude;
+                    row.appendChild(continuumAmplitudeCell);
+
+                    const continuumAmplitudeUncertaintyCell = document.createElement('td');
+                    continuumAmplitudeUncertaintyCell.textContent = item.ContinuumAmplitudeUncertainty;
+                    row.appendChild(continuumAmplitudeUncertaintyCell);
+
+                    // Ajoutez ici les autres cellules correspondant aux autres colonnes que vous souhaitez afficher
+
+                    // Ajouter la ligne au tableau
+                    tbody.appendChild(row);
+                    
+                });
+            })
+            .catch(error => {
+                console.error('Une erreur s\'est produite lors de la récupération des données :', error);
+            });
+    </script>
+</body>
+</html>

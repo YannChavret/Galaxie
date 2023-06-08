@@ -47,7 +47,43 @@ app.get("/api/data", (req, res) => {
 
     // Fusionner les données si nécessaire
     const mergedData = [...dataA, ...dataB];
-    res.json(mergedData);
+
+    // Fonction pour calculer les variations entre les positions 0 et 7, 1 et 8, etc.
+    function calculateVariations(data) {
+      const newData = [];
+
+      for (let i = 0; i < data.length - 7; i++) {
+        const rowA = data[i];
+        const rowB = data[i + 7];
+
+        if (rowA && rowB) {
+          const newRow = {};
+
+          for (const key in rowA) {
+            if (rowA.hasOwnProperty(key) && rowB.hasOwnProperty(key)) {
+              const valueA = rowA[key];
+              const valueB = rowB[key];
+
+              if (typeof valueA === "number" && typeof valueB === "number") {
+                const variation = ((valueB - valueA) / valueA) * 100;
+                newRow[key] = variation; // Arrondir à 2 décimales
+              } else {
+                newRow[key] = null;
+              }
+            }
+          }
+
+          newData.push(newRow);
+        }
+      }
+
+      return newData;
+    }
+
+    // Calculer les variations pour les données fusionnées
+    const dataWithVariations = calculateVariations(mergedData);
+
+    res.json(dataWithVariations);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Erreur lors du chargement des données." });

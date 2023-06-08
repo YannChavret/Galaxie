@@ -19,6 +19,7 @@
     <table id="data-table">
         <thead>
             <tr>
+                <th>Rank</th>
                 <th>Redshift</th>
                 <th>Continuum Amplitude</th>
                 <th>Continuum Amplitude Uncertainty</th>
@@ -30,7 +31,6 @@
                 <th>Lines Ratio Amplitude Em</th>
                 <th>Lines Ratio Ism Coeff</th>
                 <th>Lines Ratio Name</th>
-                <th>Rank</th>
                 <th>Redshift Log Proba Density</th>
                 <th>Redshift Proba</th>
                 <th>Redshift Proba Zmax</th>
@@ -67,6 +67,10 @@
                     const row = document.createElement('tr');
 
                     // Ajouter les cellules avec les valeurs correspondantes
+                    const Rank = document.createElement('td');
+                    Rank.textContent = item.Rank;
+                    row.appendChild(Rank);
+                    
                     const redshiftCell = document.createElement('td');
                     redshiftCell.textContent = item.Redshift;
                     row.appendChild(redshiftCell);
@@ -111,9 +115,7 @@
                     LinesRatioName.textContent = item.LinesRatioName;
                     row.appendChild(LinesRatioName);
 
-                    const Rank = document.createElement('td');
-                    Rank.textContent = item.Rank;
-                    row.appendChild(Rank);
+
 
                     const RedshiftLogProbaDensity = document.createElement('td');
                     RedshiftLogProbaDensity.textContent = item.RedshiftLogProbaDensity;

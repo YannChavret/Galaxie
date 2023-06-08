@@ -47,7 +47,6 @@ app.get("/api/data", (req, res) => {
 
     // Fusionner les données si nécessaire
     const mergedData = [...dataA, ...dataB];
-    console.log(mergedData);
     res.json(mergedData);
   } catch (error) {
     console.error(error);

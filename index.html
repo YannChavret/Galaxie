@@ -22,6 +22,30 @@
                 <th>Redshift</th>
                 <th>Continuum Amplitude</th>
                 <th>Continuum Amplitude Uncertainty</th>
+                <th>Continuum Igm Index</th>
+                <th>Continuum Ism Coeff</th>
+                <th>Continuum Name</th>
+                <th>Least Square</th>
+                <th>Lines Ratio Amplitude Abs</th>
+                <th>Lines Ratio Amplitude Em</th>
+                <th>Lines Ratio Ism Coeff</th>
+                <th>Lines Ratio Name</th>
+                <th>Rank</th>
+                <th>Redshift Log Proba Density</th>
+                <th>Redshift Proba</th>
+                <th>Redshift Proba Zmax</th>
+                <th>Redshift Proba Zmin</th>
+                <th>Redshift Uncertainty</th>
+                <th>Strong Emission Lines SNR</th>
+                <th>Sub Type</th>
+                <th>Velocity Absorption</th>
+                <th>Velocity Emission</th>
+                <th>abs_deltaZ</th>
+                <th>lfHa</th>
+                <th>lfOII</th>
+                <th>snrHa</th>
+                <th>snrOII</th>
+
                 <!-- Ajoutez ici les autres en-têtes de colonnes que vous souhaitez afficher -->
             </tr>
         </thead>
@@ -54,6 +78,102 @@
                     const continuumAmplitudeUncertaintyCell = document.createElement('td');
                     continuumAmplitudeUncertaintyCell.textContent = item.ContinuumAmplitudeUncertainty;
                     row.appendChild(continuumAmplitudeUncertaintyCell);
+
+                    const ContinuumIgmIndex = document.createElement('td');
+                    ContinuumIgmIndex.textContent = item.ContinuumIgmIndex;
+                    row.appendChild(ContinuumIgmIndex);
+
+                    const ContinuumIsmCoeff = document.createElement('td');
+                    ContinuumIsmCoeff.textContent = item.ContinuumIsmCoeff;
+                    row.appendChild(ContinuumIsmCoeff);
+
+                    const ContinuumName = document.createElement('td');
+                    ContinuumName.textContent = item.ContinuumName;
+                    row.appendChild(ContinuumName);
+
+                    const LeastSquare = document.createElement('td');
+                    LeastSquare.textContent = item.LeastSquare;
+                    row.appendChild(LeastSquare);
+
+                    const LinesRatioAmplitudeAbs = document.createElement('td');
+                    LinesRatioAmplitudeAbs.textContent = item.LinesRatioAmplitudeAbs;
+                    row.appendChild(LinesRatioAmplitudeAbs);
+
+                    const LinesRatioAmplitudeEm = document.createElement('td');
+                    LinesRatioAmplitudeEm.textContent = item.LinesRatioAmplitudeEm;
+                    row.appendChild(LinesRatioAmplitudeEm);
+
+                    const LinesRatioIsmCoeff = document.createElement('td');
+                    LinesRatioIsmCoeff.textContent = item.LinesRatioIsmCoeff;
+                    row.appendChild(LinesRatioIsmCoeff);
+
+                    const LinesRatioName = document.createElement('td');
+                    LinesRatioName.textContent = item.LinesRatioName;
+                    row.appendChild(LinesRatioName);
+
+                    const Rank = document.createElement('td');
+                    Rank.textContent = item.Rank;
+                    row.appendChild(Rank);
+
+                    const RedshiftLogProbaDensity = document.createElement('td');
+                    RedshiftLogProbaDensity.textContent = item.RedshiftLogProbaDensity;
+                    row.appendChild(RedshiftLogProbaDensity);
+
+                    const RedshiftProba = document.createElement('td');
+                    RedshiftProba.textContent = item.RedshiftProba;
+                    row.appendChild(RedshiftProba);
+
+                    const RedshiftProbaZmax = document.createElement('td');
+                    RedshiftProbaZmax.textContent = item.RedshiftProbaZmax;
+                    row.appendChild(RedshiftProbaZmax);
+
+                    const RedshiftProbaZmin = document.createElement('td');
+                    RedshiftProbaZmin.textContent = item.RedshiftProbaZmin;
+                    row.appendChild(RedshiftProbaZmin);
+
+                    const RedshiftUncertainty = document.createElement('td');
+                    RedshiftUncertainty.textContent = item.RedshiftUncertainty;
+                    row.appendChild(RedshiftUncertainty);
+
+                    const StrongEmissionLinesSNR = document.createElement('td');
+                    StrongEmissionLinesSNR.textContent = item.StrongEmissionLinesSNR;
+                    row.appendChild(StrongEmissionLinesSNR);
+
+                    const SubType = document.createElement('td');
+                    SubType.textContent = item.SubType;
+                    row.appendChild(SubType);
+
+                    const VelocityAbsorption = document.createElement('td');
+                    VelocityAbsorption.textContent = VelocityAbsorption.SubType;
+                    row.appendChild(VelocityAbsorption);
+
+                    const VelocityEmission = document.createElement('td');
+                    VelocityEmission.textContent = item.VelocityEmission;
+                    row.appendChild(VelocityEmission);
+
+                    const abs_deltaZ = document.createElement('td');
+                    abs_deltaZ.textContent = item.abs_deltaZ;
+                    row.appendChild(abs_deltaZ);
+
+                    const lfHa = document.createElement('td');
+                    lfHa.textContent = item.lfHa;
+                    row.appendChild(lfHa);
+
+                    const lfOII = document.createElement('td');
+                    lfOII.textContent = item.lfOII;
+                    row.appendChild(lfOII);
+
+                    const snrHa = document.createElement('td');
+                    snrHa.textContent = item.snrHa;
+                    row.appendChild(snrHa);
+
+                    const snrOII = document.createElement('td');
+                    snrOII.textContent = item.snrOII;
+                    row.appendChild(snrOII);
+
+
+
+
 
                     // Ajoutez ici les autres cellules correspondant aux autres colonnes que vous souhaitez afficher
 

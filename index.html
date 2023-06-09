@@ -1,61 +1,99 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html>
 <head>
     <title>Variation des données</title>
     <style>
         table {
             border-collapse: collapse;
-            width: 100%;
+            width scope="col": 100%;
         }
 
-        th, td {
+        th scope="col", td {
             padding: 8px;
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
     </style>
     <link href="dist/css/tabulator.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 <script type="text/javascript" src="dist/js/tabulator.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <div class="container ">
-        <H1 class="display-3">Variation des données</H1>
+    <header>
+        <nav style="width: 100%" class="navbar navbar-expand-lg bg-light" data-bs-th scope="col"eme="light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img alt="logo" src="img/logoS.png"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Anoth scope="col"er action</a>
+            <a class="dropdown-item" href="#">Someth scope="col"ing else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    </header>
+    <H1 class="display-3">Variation des données</H1>
     <table id="data-table" class="table table-striped table-hover table-bordered shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-        <thead class="table-info ">
+        <th scope="col"ead class="table-info ">
             <tr>
-                <th>Rank </th>
-                <th>Redshift</th>
-                <th>Continuum Amplitude (%)</th>
-                <th>Continuum Amplitude Uncertainty (%)</th>
-                <th>Continuum Igm Index (%)</th>
-                <th>Continuum Ism Coeff (%)</th>
-                <th>Continuum Name (%)</th>
-                <th>Least Square (%)</th>
-                <th>Lines Ratio Amplitude Abs (%)</th>
-                <th>Lines Ratio Amplitude Em (%)</th>
-                <th>Lines Ratio Ism Coeff (%)</th>
-                <th>Lines Ratio Name (%)</th>
-                <th>Redshift Log Proba Density (%)</th>
-                <th>Redshift Proba (%)</th>
-                <th>Redshift Proba Zmax (%)</th>
-                <th>Redshift Proba Zmin (%)</th>
-                <th>Redshift Uncertainty (%)</th>
-                <th>Strong Emission Lines SNR (%)</th>
-                <th>Sub Type (%)</th>
-                <th>Velocity Absorption (%)</th>
-                <th>Velocity Emission (%)</th>
-                <th>abs_deltaZ (%)</th>
-                <th>lfHa (%)</th>
-                <th>lfOII (%)</th>
-                <th>snrHa (%)</th>
-                <th>snrOII (%)</th>
+                <th scope="col">Rank </th>
+                <th scope="col">Redshift</th>
+                <th scope="col">Continuum Amplitude (%)</th>
+                <th scope="col">Continuum Amplitude Uncertainty (%)</th>
+                <th scope="col">Continuum Igm Index (%)</th>
+                <th scope="col">Continuum Ism Coeff (%)</th>
+                <th scope="col">Continuum Name (%)</th>
+                <th scope="col">Least Square (%)</th>
+                <th scope="col">Lines Ratio Amplitude Abs (%)</th>
+                <th scope="col">Lines Ratio Amplitude Em (%)</th>
+                <th scope="col">Lines Ratio Ism Coeff (%)</th>
+                <th scope="col">Lines Ratio Name (%)</th>
+                <th scope="col">Redshift Log Proba Density (%)</th>
+                <th scope="col">Redshift Proba (%)</th>
+                <th scope="col">Redshift Proba Zmax (%)</th>
+                <th scope="col">Redshift Proba Zmin (%)</th>
+                <th scope="col">Redshift Uncertainty (%)</th>
+                <th scope="col">Strong Emission Lines SNR (%)</th>
+                <th scope="col">Sub Type (%)</th>
+                <th scope="col">Velocity Absorption (%)</th>
+                <th scope="col">Velocity Emission (%)</th>
+                <th scope="col">abs_deltaZ (%)</th>
+                <th scope="col">lfHa (%)</th>
+                <th scope="col">lfOII (%)</th>
+                <th scope="col">snrHa (%)</th>
+                <th scope="col">snrOII (%)</th>
 
                 <!-- Ajoutez ici les autres en-têtes de colonnes que vous souhaitez afficher -->
             </tr>
-        </thead>
+        </th scope="col"ead>
         <tbody>
             <!-- Les données seront ajoutées ici dynamiquement en utilisant JavaScript -->
         </tbody>
@@ -67,8 +105,8 @@
 
         // Récupérer les données depuis l'API (remplacez l'URL par celle de votre API)
         fetch('http://localhost:3000/api/data')
-            .then(response => response.json())
-            .then(data => {
+            .th scope="col"en(response => response.json())
+            .th scope="col"en(data => {
                 const dataTable = document.getElementById('data-table');
                 const tbody = dataTable.getElementsByTagName('tbody')[0];
                 console.log(data);

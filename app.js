@@ -72,6 +72,11 @@ app.get("/api/data", (req, res) => {
               ) {
                 const variation = ((valueB - valueA) / valueA) * 100;
                 newRow[key] = variation;
+              } else if (
+                typeof valueA === "string" &&
+                typeof valueB === "string"
+              ) {
+                newRow[key] = valueA;
               } else {
                 newRow[key] = null;
               }

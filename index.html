@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Comparaison des données</title>
+    <title>Variation des données</title>
     <style>
         table {
             border-collapse: collapse;
@@ -15,36 +15,37 @@
         }
     </style>
 </head>
+<H1>Variation des données</H1>
 <body>
     <table id="data-table">
         <thead>
             <tr>
-                <th>Rank</th>
+                <th>Rank </th>
                 <th>Redshift</th>
-                <th>Continuum Amplitude</th>
-                <th>Continuum Amplitude Uncertainty</th>
-                <th>Continuum Igm Index</th>
-                <th>Continuum Ism Coeff</th>
-                <th>Continuum Name</th>
-                <th>Least Square</th>
-                <th>Lines Ratio Amplitude Abs</th>
-                <th>Lines Ratio Amplitude Em</th>
-                <th>Lines Ratio Ism Coeff</th>
-                <th>Lines Ratio Name</th>
-                <th>Redshift Log Proba Density</th>
-                <th>Redshift Proba</th>
-                <th>Redshift Proba Zmax</th>
-                <th>Redshift Proba Zmin</th>
-                <th>Redshift Uncertainty</th>
-                <th>Strong Emission Lines SNR</th>
-                <th>Sub Type</th>
-                <th>Velocity Absorption</th>
-                <th>Velocity Emission</th>
-                <th>abs_deltaZ</th>
-                <th>lfHa</th>
-                <th>lfOII</th>
-                <th>snrHa</th>
-                <th>snrOII</th>
+                <th>Continuum Amplitude (%)</th>
+                <th>Continuum Amplitude Uncertainty (%)</th>
+                <th>Continuum Igm Index (%)</th>
+                <th>Continuum Ism Coeff (%)</th>
+                <th>Continuum Name (%)</th>
+                <th>Least Square (%)</th>
+                <th>Lines Ratio Amplitude Abs (%)</th>
+                <th>Lines Ratio Amplitude Em (%)</th>
+                <th>Lines Ratio Ism Coeff (%)</th>
+                <th>Lines Ratio Name (%)</th>
+                <th>Redshift Log Proba Density (%)</th>
+                <th>Redshift Proba (%)</th>
+                <th>Redshift Proba Zmax (%)</th>
+                <th>Redshift Proba Zmin (%)</th>
+                <th>Redshift Uncertainty (%)</th>
+                <th>Strong Emission Lines SNR (%)</th>
+                <th>Sub Type (%)</th>
+                <th>Velocity Absorption (%)</th>
+                <th>Velocity Emission (%)</th>
+                <th>abs_deltaZ (%)</th>
+                <th>lfHa (%)</th>
+                <th>lfOII (%)</th>
+                <th>snrHa (%)</th>
+                <th>snrOII (%)</th>
 
                 <!-- Ajoutez ici les autres en-têtes de colonnes que vous souhaitez afficher -->
             </tr>
@@ -115,8 +116,6 @@
                     LinesRatioName.textContent = item.LinesRatioName;
                     row.appendChild(LinesRatioName);
 
-
-
                     const RedshiftLogProbaDensity = document.createElement('td');
                     RedshiftLogProbaDensity.textContent = item.RedshiftLogProbaDensity;
                     row.appendChild(RedshiftLogProbaDensity);
@@ -172,9 +171,6 @@
                     const snrOII = document.createElement('td');
                     snrOII.textContent = item.snrOII;
                     row.appendChild(snrOII);
-
-
-
 
 
                     // Ajoutez ici les autres cellules correspondant aux autres colonnes que vous souhaitez afficher

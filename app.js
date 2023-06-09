@@ -64,9 +64,14 @@ app.get("/api/data", (req, res) => {
               const valueA = rowA[key];
               const valueB = rowB[key];
 
-              if (typeof valueA === "number" && typeof valueB === "number") {
+              if (key === "Rank" || key === "Redshift") {
+                newRow[key] = valueA;
+              } else if (
+                typeof valueA === "number" &&
+                typeof valueB === "number"
+              ) {
                 const variation = ((valueB - valueA) / valueA) * 100;
-                newRow[key] = variation; // Arrondir à 2 décimales
+                newRow[key] = variation;
               } else {
                 newRow[key] = null;
               }
